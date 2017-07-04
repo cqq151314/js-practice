@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="http://javascript.ruanyifeng.com/stdlib/math.html">参考网址</a>
+<script>
+    console.log(new Object(123));   // Number
+    var data=[{'name':"张三","age":23}, {'name':"李四","age":23}, {'name':"王五","age":23}, {'name':"小六","age":23}]; // 定义data数组
+    var data2=JSON.stringify(data);  // data转换成JSON字符串
+    console.log("JSON.stringify---"+data2);
+    var data3=JSON.parse(data2);     // JSON字符串转换成JSON对象
+    console.log("[object Array]----"+data3);
+    console.log(Array.isArray(data3));// 判断data3是不是数组   true
+    console.log(Number(1) == true); // 判断1是不是数字    true
+    for(var i = 0; i < data3.length; i++){  // JSON.parse转换后的Json对象可以进行循环
+        console.log(data3[i]);
+    }
+    console.log(Object.keys(data));  // Object.keys() 遍历对象的属性，此处拿到data数组的下标
+    console.log("valueOf----"+data.valueOf()); // 返回当前对象对应的值。
+    console.log("toString----"+data.toString()); // 返回当前对象对应的字符串形式。
+    console.log([1, 2, 3].toString());
+    console.log(Object.prototype.toString.call(data)); // [object Array]
+</script>
+</body>
+</html>

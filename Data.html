@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date()的使用</title>
+</head>
+<body>
+<script>
+    console.log(Date()); // 返回一个代表当前时间的字符串   Tue Jul 04 2017 11:05:07 GMT+0800 (中国标准时间)
+    console.log(new Date()); //获取当前时间 Tue Jul 04 2017 11:05:07 GMT+0800 (中国标准时间)
+    console.log(new Date(1378218728000)); // 根据豪秒值获取时间 Tue Jul 04 2017 11:05:07 GMT+0800 (中国标准时间)
+    console.log(new Date().getTime());  // 获取当前时间的毫秒值 1499137507166
+    var d=new Date();
+    console.log(d.toLocaleDateString()); // 2017-7-4
+    console.log(d.toLocaleTimeString());//  11:17:07
+    d.getTime();  // 返回距离1970年1月1日00:00:00的毫秒数，等同于valueOf方法。
+    d.getDate();  // 返回实例对象对应每个月的几号（从1开始）。
+    d.getDay();   // 返回星期几，星期日为0，星期一为1，以此类推。
+    d.getYear();  // 返回距离1900的年数。
+    d.getFullYear();  // 返回四位的年份。
+    d.getMonth();     // 返回月份（0表示1月，11表示12月）。
+    d.getHours();     // 返回小时（0-23）。
+    d.getMilliseconds();      // 返回毫秒（0-999）。
+    d.getMinutes();       // 返回分钟（0-59）。
+    d.getSeconds();      // 返回秒（0-59）。
+    d.getTimezoneOffset();        // 返回当前时间与UTC的时区差异，以分钟表示，返回结果考虑到了夏令时因素。
+    console.log(d.getFullYear()+"年"+ d.getMonth()+"月"+ d.getDate()+"日   星期"+ d.getDay()+"   "+d.getHours()+"/"+ d.getMinutes()+"/"+d.getSeconds())
+</script>
+</body>
+</html>
